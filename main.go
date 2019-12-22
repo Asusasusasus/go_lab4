@@ -1,13 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"github.com/drunyaD/go_lab4/engine"
         "github.com/drunyaD/go_lab4/commands"
-	"bufio"
-	"strings"
 	"os"
-	"errors"
+	"bufio"
 )
 
 
@@ -19,7 +16,7 @@ func main() {
 		scanner := bufio.NewScanner(input)
 		for scanner.Scan() {
 			commandLine := scanner.Text()
-			cmd := parse(commandLine)
+			cmd := commands.Parse(commandLine)
 			eventLoop.Post(cmd)
 		}
 	}
