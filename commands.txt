@@ -1,0 +1,4 @@
+print It's
+print lab_4
+print result:
+sha1 helloworld
